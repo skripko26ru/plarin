@@ -1,0 +1,38 @@
+.createform {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: red;
+    margin: 0;
+  }
+
+  &__button {
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+    &--closed {
+      top: 20px;
+      right: 20px;
+    }
+
+    &--delete {
+      bottom: 20px;
+      left: 20px;
+    }
+
+    &--save {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}

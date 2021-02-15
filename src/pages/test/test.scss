@@ -1,0 +1,59 @@
+.test {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 30px;
+  background-color: aliceblue;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    justify-content: center;
+  }
+
+  &__item {
+    padding: 50px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgb(214, 202, 30);
+    width: calc(100% / 12 * 4 - 32px);
+    margin: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(233, 222, 76);
+    }
+
+    &--add {
+      @extend .test__item;
+      font-weight: 700;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__page {
+    padding: 20px;
+    cursor: pointer;
+
+    &--active {
+      font-weight: 900;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .item {
+    width: calc(100% / 12 * 6 - 32px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .item {
+    width: calc(100% - 32px);
+  }
+}
